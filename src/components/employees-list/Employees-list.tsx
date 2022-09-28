@@ -1,12 +1,16 @@
 import {EmployeesListItem} from "../employees-list-item/Employes-list-item";
 import './Employees-list.css'
+import {EmployeesListType} from "./types";
 
-export const EmployeesList = () => {
+export const EmployeesList = (props: EmployeesListType) => {
+
+    const {data} = props
+
     return (
         <ul className='app-list list-group'>
-            <EmployeesListItem/>
-            <EmployeesListItem/>
-            <EmployeesListItem/>
+
+            {data.map(({name,salary,increase})=><EmployeesListItem key = {name + salary} name={name} salary={salary} increase={increase}/>)}
+
         </ul>
     )
 }

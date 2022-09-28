@@ -7,6 +7,13 @@ import {EmployeesList} from "../employees-list/Employees-list";
 import {EmployeesAddForm} from "../employees-add-form/Employees-add-form";
 
 export const App = () => {
+
+    const data = [
+        {name: 'Max', salary: 500, increase: true},
+        {name: 'Bob', salary: 3000, increase: false},
+        {name: 'Ann', salary: 1000, increase: true},
+    ]
+
     return (
         <div className='app'>
             <AppInfo/>
@@ -16,7 +23,7 @@ export const App = () => {
                 <AppFilter/>
             </div>
 
-            <EmployeesList/>
+            <EmployeesList data={data}/>
             <EmployeesAddForm/>
         </div>
     );
