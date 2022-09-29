@@ -9,7 +9,7 @@ export const EmployeesList = (props: EmployeesListType) => {
     return (
         <ul className='app-list list-group'>
 
-            {data.map(({name,salary,increase})=><EmployeesListItem key = {name + salary} name={name} salary={salary} increase={increase}/>)}
+            {data.map(({name,salary})=><EmployeesListItem key = {name + salary} name={name} salary={salary} />)}
 
         </ul>
     )
