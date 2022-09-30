@@ -4,17 +4,20 @@ import {EmployeesListType} from "./types";
 
 export const EmployeesList = (props: EmployeesListType) => {
 
-    const {data,onDeleteItem} = props
+    const {data, onDeleteItem, onToggleProp} = props
 
-    const onDelete=(id:number)=>{
+    const onDelete = (id: number) => {
         onDeleteItem(id)
     }
 
     return (
         <ul className='app-list list-group'>
 
-            {data.map(({name, salary, id}) =>
-                <EmployeesListItem key={id} name={name} salary={salary} id={id} onDelete={()=>onDelete(id)}/>)}
+            {data.map(({name, salary, id, increase,rise}) =>
+                <EmployeesListItem key={id} name={name} increase={increase} rise={rise}
+                                   salary={salary} id={id}
+                                   onDelete={() => onDelete(id)}
+                                   onToggleProp={onToggleProp}/>)}
 
         </ul>
     )
