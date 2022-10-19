@@ -26,6 +26,7 @@ export class App extends Component<any, { data: EmployeesItem[] }> {
         this.setState(({data}) => ({
             data: this.state.data.filter(item => item.id !== id)
         }))
+
     }
 
     onAddItem = (name: string, salary: number) => {

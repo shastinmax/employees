@@ -36,7 +36,7 @@ export class EmployeesAddForm extends Component<EmployeesTypeProps, StateTypePro
 
     render() {
 
-        const {name, salary} = this.state
+        const{name,salary} = this.state
 
 
         return (
